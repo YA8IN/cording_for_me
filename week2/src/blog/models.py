@@ -4,7 +4,7 @@ from django.db import models
 class Article(models.Model):
     tilte = models.CharField(max_length=30)
     contents = models.TextField()
-    view_count = models.IntField()
+    view_count = models.IntegerField()
 
 class Comment(models.Model):
     article = models.ForeignKey(Article)
