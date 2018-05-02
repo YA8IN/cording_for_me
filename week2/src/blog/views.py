@@ -13,7 +13,12 @@ def index(request):
     # name = "Yubin"
     # return render(request, "index.html",{ "name" : name })
     article_list = Article.objects.all()
+    Article.objects.create(
+        title="hello"
+        # contents="this is test"
+        # view_count=0
+    )
     ctx = {
-        "article_list": article_list
+        "article_list" : article_list
     }
     return render(request, "index.html", ctx)
